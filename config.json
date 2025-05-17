@@ -1,9 +1,9 @@
 {
   "projectName": "perscom",
   "projectDescription": "An API wrapper that helps kickstart your next PERSCOM integration.",
-  "projectVersion": "1.0.0",
+  "projectVersion": "0.0.1",
   "npmName": "perscom",
-  "npmVersion": "1.0.0",
+  "npmVersion": "0.0.1",
   "npmDescription": "An API wrapper that helps kickstart your next PERSCOM integration.",
   "licenseName": "MIT",
   "gitHost": "github.com",

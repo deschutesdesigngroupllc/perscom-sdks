@@ -32,10 +32,6 @@ jobs:
         working-directory: './typescript'
         run: npm ci
 
-      - name: Build SDK
-        working-directory: './typescript'
-        run: npm run build
-
       - name: Publish Package
         working-directory: './typescript'
         run: npm publish --provenance --access public
