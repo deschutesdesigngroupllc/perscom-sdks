@@ -4,9 +4,11 @@ on:
   push:
     paths:
       - 'typescript/**'
+      - '.github/workflows/**'
   pull_request:
     paths:
       - 'typescript/**'
+      - '.github/workflows/**'
 
 jobs:
   publish:
@@ -27,12 +29,15 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install Dependencies
+        working-directory: './typescript'
         run: npm ci
 
       - name: Build SDK
+        working-directory: './typescript'
         run: npm run build
 
       - name: Publish Package
+        working-directory: './typescript'
         run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
