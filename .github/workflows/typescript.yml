@@ -1,0 +1,38 @@
+name: Publish Package
+
+on:
+  push:
+    paths:
+      - 'typescript/**'
+  pull_request:
+    paths:
+      - 'typescript/**'
+
+jobs:
+  publish:
+    name: Publish Package
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+
+    steps:
+      - name: Checkout Source
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build SDK
+        run: npm run build
+
+      - name: Publish Package
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
