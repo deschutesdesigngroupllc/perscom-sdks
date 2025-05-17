@@ -1,0 +1,18 @@
+{
+  "projectName": "perscom",
+  "projectDescription": "An API wrapper that helps kickstart your next PERSCOM integration.",
+  "projectVersion": "1.0.0",
+  "npmName": "perscom",
+  "npmVersion": "1.0.0",
+  "npmDescription": "An API wrapper that helps kickstart your next PERSCOM integration.",
+  "licenseName": "MIT",
+  "gitHost": "github.com",
+  "gitUserId": "deschutesdesigngroupllc",
+  "gitRepoId": "perscom-sdks",
+  "usePromises": true,
+  "apiDocs": true,
+  "modelDocs": true,
+  "apiTests": false,
+  "modelTests": false,
+  "apiNameSuffix": null
+}

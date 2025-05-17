@@ -1,0 +1,20 @@
+{
+  "name": "perscom",
+  "version": "1.0.0",
+  "description": "OpenAPI client for perscom",
+  "author": "OpenAPI-Generator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deschutesdesigngroupllc/perscom-sdks.git"
+  },
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^4.0 || ^5.0"
+  }
+}
